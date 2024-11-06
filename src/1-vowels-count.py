@@ -1,13 +1,15 @@
 # Problem: Write a Python function called count_vowels that takes a string as input
 # and returns the number of vowels (a, e, i, o, u) in the string.
 
+import unicodedata
 import pytest
 
 # my solution:
 def count_vowels(input: str) -> int:
     total_count = 0
+    normalized_input = unicodedata.normalize('NFKD', input).encode('ASCII', 'ignore').decode('ASCII')
     vowels_for_search = ('a', 'e', 'i', 'o', 'u')
-    for ii in input:
+    for ii in normalized_input:
         if ii.lower() in vowels_for_search:
             total_count = total_count + 1
     
@@ -15,8 +17,9 @@ def count_vowels(input: str) -> int:
 
 # Solution with AI:
 def count_vowels_ai(input: str) -> int:
+    normalized_input = unicodedata.normalize('NFKD', input).encode('ASCII', 'ignore').decode('ASCII')
     vowels_for_search = {'a', 'e', 'i', 'o', 'u'}
-    return sum(1 for char in input if char.lower() in vowels_for_search)
+    return sum(1 for char in normalized_input if char.lower() in vowels_for_search)
 
 
 @pytest.mark.parametrize("input_str, expected", [
