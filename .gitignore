@@ -1,0 +1,85 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# Uvicorn logs and other runtime files
+*.log
+*.pid
+*.sock
+
+# Environment variables
+.env
+.env.*
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+
+# macOS files
+.DS_Store
+
+# Pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+
+# mypy
+.mypy_cache/
+
+# Pyright
+.pyright/
+
+# Django stuff:
+*.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Local testing
+test/
+
+# IDEs and editors
+.idea/
+*.swp
+*.swo
+
+# PEP 582; used by `pythonloc`
+__pypackages__/
+
+# dist files
+dist/
+build/
+
+# Egg files
+*.egg
+*.egg-info/
+.eggs/
+
+# Uvicorn compiled files and caches
+*.pyc
+*.pyo
+*.pyd
+*~
+
+# uv specific files
+uv.lock
